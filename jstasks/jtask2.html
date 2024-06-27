@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task 2</title>
+  <style>
+    body {
+      background-color: brown;
+      background-size: cover; 
+      background-position: center;
+      margin: 30px; 
+      padding: 0; 
+  }
+  #h2{
+      color: black;
+      margin-top: 80px;
+      font-size: 24px;
+  }
+</style>
+  <
+</head>
+<body>
+  <div>
+
+  <h1>Sort String Alphabetically</h1>
+  
+  <form id="stringForm">
+    <label for="originalString">Enter a string:</label>
+    <input type="text" id="originalString" name="originalString" required>
+    <input type="submit" value="Sort">
+  </form>
+
+  <p>Sorted String: <span id="sortedString"></span></p>
+
+  <script>
+    function sortStringAlphabetically(inputString) {
+      // Convert the string to an array of characters, sort it, and then join it back into a string
+      return inputString.split('').sort().join('');
+    }
+
+    const stringForm = document.getElementById('stringForm');
+    const originalStringInput = document.getElementById('originalString');
+    const sortedStringOutput = document.getElementById('sortedString');
+
+    stringForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      // Get the user's input and sort it
+      const originalString = originalStringInput.value;
+      const sortedString = sortStringAlphabetically(originalString);
+
+      // Display the sorted string
+      sortedStringOutput.textContent = sortedString;
+    });
+  </script>
+  </div>
+  <p id="h2">Contact:</p>
+        <br/>
+            <div class="social-icons">
+              <a href="https://www.linkedin.com/in/rajasekhar1484/" target="_blank">
+                <img src="..\..\Assets\linked_in.png"/>
+              </a>
+            </div>
+</body>
+</html>

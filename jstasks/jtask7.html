@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task 7</title>
+  <style>
+    body {
+      background-color: rgb(172, 125, 216);
+      background-size: cover; 
+      background-position: center; 
+      margin: 0; 
+      padding: 0; 
+    }
+
+    .car-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start; 
+      margin-top: 50px;
+      height: 300px; 
+    }
+
+    #car {
+      width: 100px;
+      position: relative;
+    }
+
+    @keyframes carAnimation {
+      0% {
+        top: -100px; 
+      }
+      100% {
+        top: 100%; 
+      }
+    }
+
+    #id1 {
+      text-align: left;
+      margin-top: 20px;
+    }
+
+    #h2 {
+      color: black;
+      margin-top: 80px;
+      font-size: 24px;
+    }
+
+    h2 {
+      color: blue;
+      text-align: left;
+    }
+
+    .social-icons {
+      margin-top: 20px;
+    }
+
+    .social-icons a img {
+      width: 32px;
+      height: 32px;
+    }
+  </style>
+</head>
+<body>
+  <div class="car-container">
+    <img src="../../Assets/bujji.png" alt="Car" id="car">
+  </div>
+  <h2>Click the following buttons to handle animation</h2>
+  <br/>
+
+  <div id="id1">
+    <button onclick="startCar()">Start</button>
+    <button onclick="stopCar()">Stop</button>
+  </div>
+
+  <script>
+    let carElement;
+
+    function startCar() {
+      carElement = document.getElementById('car');
+      carElement.style.animation = 'carAnimation 2s linear infinite';
+    }
+
+    function stopCar() {
+      carElement = document.getElementById('car');
+      carElement.style.animation = 'none';
+    }
+  </script>
+
+  <p id="h2">Contact:</p>
+  <br/>
+  <div class="social-icons">
+    <a href="https://www.linkedin.com/in/rajasekhar1484/" target="_blank">
+      <img src="../../Assets/linked_in.png"/>
+    </a>
+  </div>
+</body>
+</html>
+
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task 1</title>
+  <style>
+    body {
+      background-color: blueviolet;
+      background-size: cover; 
+      background-position: center;
+      margin: 30px; 
+      padding: 0; 
+  }
+  #h2{
+      color: black;
+      margin-top: 80px;
+      font-size: 24px;
+  }
+</style>
+</head>
+<body>
+<div>
+<label for="numberInput">Enter a number: </label>
+<input type="number" id="numberInput">
+
+<p id="reversedNumber"></p>
+
+<script>
+  const numberInput = document.getElementById('numberInput');
+  const reversedNumberElement = document.getElementById('reversedNumber');
+
+  numberInput.addEventListener('input', () => {
+    const inputValue = parseFloat(numberInput.value);
+    const reversedNumber = parseFloat(inputValue.toString().split('').reverse().join(''));
+    if (!isNaN(reversedNumber)) {
+      reversedNumberElement.innerText = Reversed number: ${reversedNumber};
+    } else {
+      reversedNumberElement.innerText = 'Please enter a valid number.';
+    }
+  });
+</script>
+</div>
+<p id="h2">Contact:</p>
+        <br/>
+            <div class="social-icons">
+              <a href="https://www.linkedin.com/in/rajasekhar1484/" target="_blank">
+                <img src="..\..\Assets\linked_in.png"/>
+              </a>
+            </div>
+</body>
+</html>
